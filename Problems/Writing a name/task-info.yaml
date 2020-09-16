@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    name = ['M', 'A', 'R', 'C', 'O']
+    # modify the next line
+    print(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7456
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7456">JetBrains
+    Academy</a></html>
+  time: Wed, 16 Sep 2020 14:29:50 UTC
+record: -1
