@@ -1,16 +1,20 @@
 # Write your code here
 import random
 
-options = ['rock', 'scissors', 'paper']
+options = {'scissors': 'rock', 'paper': 'scissors', 'rock': 'paper'}
 
-user_choose = input()
-# random.seed(user_choose)
-# pc_choose = random.choice(options)
-answer = ''
-if user_choose == 'rock':
-    answer = 'paper'
-elif user_choose == 'paper':
-    answer = 'scissors'
-else:
-    answer = 'rock'
-print(f'Sorry, but the computer chose {answer}')
+while True:
+    user_chose = input()
+    pc_chose = random.choice(list(options.keys()))
+    if user_chose == '!exit':
+        print('Bye')
+        break
+    elif user_chose not in options.keys():
+        print("Invalid input")
+        continue
+    elif user_chose == pc_chose:
+        print(f'There is a draw ({pc_chose})')
+    elif options[user_chose] != pc_chose:
+        print(f"Well done. The computer chose {pc_chose} and failed")
+    else:
+        print(f"Sorry, but the computer chose {pc_chose}")

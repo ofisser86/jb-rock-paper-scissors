@@ -105,5 +105,9 @@ files:
         RPSTest("rps.game").run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/projects/78/stages/433/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/78/stages/433/implement">JetBrains
+    Academy</a>
+  time: Wed, 16 Sep 2020 14:06:24 UTC
+record: 3
