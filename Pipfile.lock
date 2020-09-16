@@ -1,0 +1,28 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "84f3c934936c260f40068806b46b77a17c333398b9019846d58a5fc1aa0b1291"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "hs-test-python": {
+            "file": "https://github.com/hyperskill/hs-test-python/archive/v2.0.1.tar.gz",
+            "hashes": [
+                "sha256:10c9af89fd7e583e66f8db39b22b30b38c2ea5bdc27256de29a369a52acce6f2"
+            ],
+            "version": "==2.0.1"
+        }
+    },
+    "develop": {}
+}

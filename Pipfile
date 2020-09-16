@@ -1,0 +1,12 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+hs-test-python = {file = "https://github.com/hyperskill/hs-test-python/archive/v2.0.1.tar.gz"}
+
+[requires]
+python_version = "3.8"
