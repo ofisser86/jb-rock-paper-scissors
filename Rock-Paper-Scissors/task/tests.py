@@ -6,20 +6,83 @@ CheckResult.wrong = lambda feedback: CheckResult(False, feedback)
 
 
 class RPSTest(StageTest):
+
+    def __init__(self, module_to_test: str):
+        super().__init__(module_to_test)
+        self.wins = 0
+        self.draws = 0
+        self.loses = 0
+
     def generate(self) -> List[TestCase]:
-        cases = ["rock",
-                 "paper",
-                 "scissors"]
-        return [TestCase(stdin=cases[case],
-                         attach=(cases + cases)[case + 1])
-                for case in range(len(cases))]
+        options = ["rock", "paper", "scissors"]
+        inputs = list()
+        for option in options:
+            [inputs.append(option) for _ in range(50)]
+        tests = [TestCase(stdin=inp, attach=inp) for inp in inputs]
+        tests.append(TestCase(stdin='rock', attach='rock', check_function=self.check_random))
+        return tests
+
+    def check_random(self, reply: str, attach) -> CheckResult:
+
+        wrong_randomize = CheckResult.wrong("The results of the games: {} wins, {} draws and {} loses\n"
+                                            "Looks like you don't use the random module to choose a random option!\n"
+                                            "The number of wins, draws and loses should be approximately the same.\n"
+                                            "Make sure you output the results of the games the same way as in the examples!\n"
+                                            "If you are sure that you use random module try to rerun the tests!\n"
+                                            .format(self.wins, self.draws, self.loses))
+        if self.loses < 30:
+            return wrong_randomize
+        if self.draws < 30:
+            return wrong_randomize
+        if self.wins < 30:
+            return wrong_randomize
+        return CheckResult.correct()
 
     def check(self, reply: str, attach) -> CheckResult:
-        correct_output = "Sorry, but the computer chose {}".format(attach.strip())
-        return CheckResult("Sorry, but the computer chose {}".format(attach.strip()) == reply.strip(),
-                           "Your answer on \"{}\" was \"{}\". This is a wrong output. The correct output is \"{}\"".format(attach, reply.strip(),
-                                                                                                                           correct_output))
+
+        wrong_result = CheckResult.wrong("Seems like your answer (\"{}\") is either inconsistent "
+                                         "with the rock-paper-scissors rules or the string is formatted incorrectly.  "
+        "Check punctuation, spelling, and capitalization of your output. "
+        "Also, make sure you are following the rules of the game.".format(reply))
+
+        hits = {
+            'rock': 'scissors',
+            'scissors': 'paper',
+            'paper': 'rock'
+        }
+
+        computer_option = 'not found'
+
+        if 'scissors' in reply.lower():
+            computer_option = 'scissors'
+        elif 'paper' in reply.lower():
+            computer_option = 'paper'
+        elif 'rock' in reply.lower():
+            computer_option = 'rock'
+
+        if computer_option == 'not found':
+            return wrong_result
+
+        if hits[attach] == computer_option:
+            result = 'well done'
+        elif attach == computer_option:
+            result = 'draw'
+        else:
+            result = 'sorry'
+
+        if result not in reply.lower():
+            return wrong_result
+
+        if 'sorry' in reply.lower():
+            self.loses += 1
+        elif 'draw' in reply.lower():
+            self.draws += 1
+        elif 'well done' in reply.lower():
+            self.wins += 1
+        else:
+            return wrong_result
+
+        return CheckResult.correct()
 
 
-if __name__ == '__main__':
-    RPSTest("rps.game").run_tests()
+RPSTest("rps.game").run_tests()

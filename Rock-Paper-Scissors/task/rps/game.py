@@ -1,16 +1,17 @@
 # Write your code here
 import random
 
-options = ['rock', 'scissors', 'paper']
+win = {'scissors': 'rock', 'paper': 'scissors', 'rock': 'paper'}
+options = ['paper', 'scissors', 'rock']
 
-user_choose = input()
-# random.seed(user_choose)
-# pc_choose = random.choice(options)
-answer = ''
-if user_choose == 'rock':
-    answer = 'paper'
-elif user_choose == 'paper':
-    answer = 'scissors'
+
+user_chose = input()
+# or could use list(win.keys())
+pc_chose = random.choice(options)
+
+if user_chose == pc_chose:
+    print(f'There is a draw ({pc_chose})')
+elif win[user_chose] != pc_chose:
+    print(f"Well done. The computer chose {pc_chose} and failed")
 else:
-    answer = 'rock'
-print(f'Sorry, but the computer chose {answer}')
+    print(f"Sorry, but the computer chose {pc_chose}")
