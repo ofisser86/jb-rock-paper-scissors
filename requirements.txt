@@ -1,1 +1,1 @@
-https://github.com/hyperskill/hs-test-python/archive/v2.0.1.tar.gz
+https://github.com/hyperskill/hs-test-python/archive/release.tar.gz

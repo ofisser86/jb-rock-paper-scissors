@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# add Turkey to countries.txt'
+  learner_created: false
+- name: countries.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/8340
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8340">JetBrains
+    Academy</a></html>
+  time: Thu, 17 Sep 2020 15:48:46 UTC
+record: -1

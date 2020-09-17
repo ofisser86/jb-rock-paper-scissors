@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    f_name = "test.txt"
+    my_string = "A string to be written to a file!"
+
+    # what to do with the file and the string
+  learner_created: false
+- name: test.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/8012
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8012">JetBrains
+    Academy</a></html>
+  time: Thu, 17 Sep 2020 16:10:19 UTC
+record: -1

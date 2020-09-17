@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # read animals.txt
+    # and write animals_new.txt
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8341
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8341">JetBrains
+    Academy</a></html>
+  time: Thu, 17 Sep 2020 15:36:12 UTC
+record: -1
