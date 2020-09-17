@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # find a mistake below
+    file = open('books.txt', 'w', encoding='utf-8')
+
+    # closing and other operations are done below
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8695
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8695">JetBrains
+    Academy</a></html>
+  time: Thu, 17 Sep 2020 12:23:08 UTC
+record: -1

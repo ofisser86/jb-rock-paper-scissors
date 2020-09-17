@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    numbers = [1234, 5678, 90]
+    # save this list in `file_with_list.txt`
+  learner_created: false
+- name: file_with_list.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/9331
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9331">JetBrains
+    Academy</a></html>
+  time: Thu, 17 Sep 2020 16:04:42 UTC
+record: -1

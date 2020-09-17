@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# read test_file.txt'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8143
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8143">JetBrains
+    Academy</a></html>
+  time: Thu, 17 Sep 2020 15:11:55 UTC
+record: -1
