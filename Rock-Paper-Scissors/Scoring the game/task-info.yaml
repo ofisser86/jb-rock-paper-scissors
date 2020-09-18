@@ -157,6 +157,16 @@ files:
 - name: rps/rating.txt
   visible: true
   learner_created: true
+- name: rps/animals.txt
+  visible: true
+  learner_created: true
+- name: rating.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/78/stages/434/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/78/stages/434/implement">JetBrains
+    Academy</a>
+  time: Fri, 18 Sep 2020 14:42:26 UTC
 record: -1

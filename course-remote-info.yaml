@@ -15,7 +15,7 @@ stages:
   is_completed: true
 - id: 434
   step: 7208
-  is_completed: false
+  is_completed: true
 - id: 435
   step: 7209
   is_completed: false
@@ -84,8 +84,6 @@ topics:
   3:
   - title: Files
     theory_id: 6989
-  - title: Computer programming
-    theory_id: 8739
   - title: Intro to computational thinking
     theory_id: 8742
   - title: Components of computational thinking
