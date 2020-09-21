@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: n = int(input())
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6886
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/6886">JetBrains
+    Academy</a></html>
+  time: Mon, 21 Sep 2020 10:23:02 UTC
+record: -1

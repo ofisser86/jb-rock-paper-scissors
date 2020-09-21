@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20,
+               22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
+    print(numbers[4:16:-1])
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6969
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/6969">JetBrains
+    Academy</a></html>
+  time: Mon, 21 Sep 2020 09:00:06 UTC
+record: -1
