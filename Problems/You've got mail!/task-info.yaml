@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # write your code here
+    # remember: the variable email is already defined
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6966
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/6966">JetBrains
+    Academy</a></html>
+  time: Mon, 21 Sep 2020 08:53:41 UTC
+record: -1

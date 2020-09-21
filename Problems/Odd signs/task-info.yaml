@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # here is your word
+    word = input()
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9152
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9152">JetBrains
+    Academy</a></html>
+  time: Mon, 21 Sep 2020 08:30:31 UTC
+record: -1
