@@ -2,9 +2,9 @@
    ## Game rules 
 # ![Game rules - Rock-Paper-Scissors](game-rules.jpg)
 
-##Objectives
+## Objectives
 
-###Your program should:
+### Program does:
 
 1. Output a line `Enter your name:` . Note that the user should enter his/her name on the same line (not the one following the output!)
 2. Read input specifying the user's name and output a new line `Hello, <name>`
