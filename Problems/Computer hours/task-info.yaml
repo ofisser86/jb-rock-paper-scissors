@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# Make sure your output matches the assignment *exactly*'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5930
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/5930">JetBrains
+    Academy</a></html>
+  time: Tue, 22 Sep 2020 05:37:25 UTC
+record: -1
