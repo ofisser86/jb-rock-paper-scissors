@@ -17,9 +17,9 @@
 9. If the input is the name of the option, then:
 10. Pick a random option
 11. Output a line with the result of the game in the following format (<option> is the name of the option chosen by the program):
-        `Lose -> Sorry, but the computer chose <option>`
-       `Draw -> There is a draw (<option>)`
-        `Win -> Well done. The computer chose <option> and failed`
+       - `Lose -> Sorry, but the computer chose <option>`
+       -  `Draw -> There is a draw (<option>)`
+       - `Win -> Well done. The computer chose <option> and failed`
 12. For each draw, add 50 points to the score. For each user's win, add 100 to his/her score. In case the user loses, don't change the score.
 13. If the input corresponds to anything else, output Invalid input
 14. Play the game again (with the same options that were defined before the start of the game)
