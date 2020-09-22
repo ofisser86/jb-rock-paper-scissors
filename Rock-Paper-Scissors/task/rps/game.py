@@ -1,7 +1,23 @@
 # Write your code here
 import random
 
-options = {'scissors': 'rock', 'paper': 'scissors', 'rock': 'paper'}
+options = {'scissors': ['rock'], 'paper': ['scissors'], 'rock': ['paper']}
+extra_options = {'scissors': ['spock', 'rock', 'water', 'dragon', 'devil', 'lightning', 'gun'],
+                 'fire': ['air', 'water', 'dragon', 'devil', 'lightning', 'gun'],
+                 'paper': ['scissors', 'lizard', 'fire', 'snake', 'human', 'tree', 'wolf', 'sponge'],
+                 'rock': ['paper', 'spock', 'air', 'water', 'dragon', 'devil', 'lightning', 'gun'],
+                 'gun': ['sponge', 'paper', 'air', 'water', 'dragon', 'devil', 'lightning'],
+                 'lightning': ['wolf', 'sponge', 'paper', 'air', 'water', 'dragon', 'devil'],
+                 'devil': ['tree', 'wolf', 'sponge', 'paper', 'air', 'water', 'dragon'],
+                 'dragon': ['human', 'tree', 'wolf', 'sponge', 'paper', 'air', 'water'],
+                 'water': ['snake', 'human', 'tree', 'wolf', 'sponge', 'paper', 'air'],
+                 'air': ['scissors', 'snake', 'human', 'tree', 'wolf', 'sponge', 'paper'],
+                 'sponge': ['rock', 'scissors', 'lizard', 'fire', 'snake', 'human', 'tree', 'wolf'],
+                 'wolf': ['gun', 'rock', 'scissors', 'lizard', 'fire', 'snake', 'human', 'tree'],
+                 'tree': ['lightning', 'gun', 'rock', 'scissors', 'lizard', 'fire', 'snake', 'human'],
+                 'human': ['devil', 'lightning', 'gun', 'rock', 'scissors', 'lizard', 'fire', 'snake'],
+                 'snake': ['dragon', 'devil', 'lightning', 'gun', 'rock', 'scissors', 'lizard', 'fire']
+                 }
 
 
 def get_rating(name):
@@ -40,7 +56,11 @@ def update_rating(name, score):
 
 user_name = input('Enter your name:')
 print(f"Hello, {user_name}")
+list_of_options = input()
 
+if list_of_options != '':
+    options = extra_options.copy()
+print("Okay, let's start")
 while True:
     user_chose = input()
     pc_chose = random.choice(list(options.keys()))
@@ -55,7 +75,7 @@ while True:
     elif user_chose == pc_chose:
         print(f'There is a draw ({pc_chose})')
         update_rating(user_name, 50)
-    elif options[user_chose] != pc_chose:
+    elif pc_chose not in options[user_chose]:
         print(f"Well done. The computer chose {pc_chose} and failed")
         update_rating(user_name, 100)
     else:
