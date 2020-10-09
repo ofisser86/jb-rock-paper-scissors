@@ -25,4 +25,4 @@
 14. Play the game again (with the same options that were defined before the start of the game)
 
 
-#### To play game follow the link  --> [![Run on Repl.it](https://repl.it/badge/github/ofisser86/jb-rock-paper-scissors)](https://repl.it/github/ofisser86/jb-rock-paper-scissors) and click button !["Run"](button.png)  
+#### To play game follow the link  --> [![Run on Repl.it](https://repl.it/badge/github/ofisser86/jb-rock-paper-scissors)](https://repl.it/github/ofisser86/jb-rock-paper-scissors) and click button !["Run"](button.png) on the top of the page
