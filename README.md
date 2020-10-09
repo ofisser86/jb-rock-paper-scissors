@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors
+# Rock-Paper-Scissors  [![Run on Repl.it](https://repl.it/badge/github/ofisser86/jb-rock-paper-scissors)](https://repl.it/github/ofisser86/jb-rock-paper-scissors)
    ## Game rules 
 # ![Game rules - Rock-Paper-Scissors](game-rules.jpg)
 
@@ -23,3 +23,6 @@
 12. For each draw, add 50 points to the score. For each user's win, add 100 to his/her score. In case the user loses, don't change the score.
 13. If the input corresponds to anything else, output Invalid input
 14. Play the game again (with the same options that were defined before the start of the game)
+
+
+To play game click here --> [![Run on Repl.it](https://repl.it/badge/github/ofisser86/jb-rock-paper-scissors)](https://repl.it/github/ofisser86/jb-rock-paper-scissors)
