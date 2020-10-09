@@ -1,0 +1,2 @@
+language = "python3"
+run = "python Rock-Paper-Scissors/task/rps/game.py"

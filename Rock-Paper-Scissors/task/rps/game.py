@@ -1,6 +1,8 @@
 # Write your code here
 import random
 
+rating_path = 'Rock-Paper-Scissors/task/rps/rating.txt'
+
 options = {'scissors': ['rock'], 'paper': ['scissors'], 'rock': ['paper']}
 extra_options = {'scissors': ['spock', 'rock', 'water', 'dragon', 'devil', 'lightning', 'gun'],
                  'fire': ['air', 'water', 'dragon', 'devil', 'lightning', 'gun'],
@@ -21,7 +23,7 @@ extra_options = {'scissors': ['spock', 'rock', 'water', 'dragon', 'devil', 'ligh
 
 
 def get_rating(name):
-    rate = open('rating.txt', 'r')
+    rate = open(rating_path, 'r')
     names_and_scores = [i.split() for i in rate.readlines()]
     user_score = 0
     for i in names_and_scores:
@@ -33,7 +35,7 @@ def get_rating(name):
 
 
 def update_rating(name, score):
-    rate = open('rating.txt', 'r')
+    rate = open(rating_path, 'r')
     names_and_scores = []
     for name in rate:
         names_and_scores += name.split()
@@ -45,7 +47,7 @@ def update_rating(name, score):
     else:
         names_and_scores += [user_name, str(score)]
 
-    write_to_rating = open('rating.txt', 'w')
+    write_to_rating = open(rating_path, 'w')
     for i in range(0, len(names_and_scores)):
         if i % 2 == 0:
             print(names_and_scores[i], file=write_to_rating, end=' ')
@@ -54,15 +56,20 @@ def update_rating(name, score):
     write_to_rating.close()
 
 
-user_name = input('Enter your name:')
-print(f"Hello, {user_name}")
-list_of_options = input()
+user_name = input('Enter your name: ')
+print(f"\nHello, {user_name}\n")
+print("""If you want to play classic game (rock, paper, scissors) - press enter,
+if want to play extended game (secret), type  -> hardrock\n""")
+list_of_options = input(">")
 
 if list_of_options != '':
     options = extra_options.copy()
-print("Okay, let's start")
+print("\nOkay, let's start")
 while True:
-    user_chose = input()
+    print(f"\nOptions in {'Classic' if len(options) == 3 else 'HardRock'} game: " + ", ".join([i for i in options.keys()]))
+    user_chose = input("""Chose one from the options above or
+    press !rating for get rating or
+    press !exit for exit the game\n> """)
     pc_chose = random.choice(list(options.keys()))
     if user_chose == '!exit':
         print('Bye')
@@ -70,13 +77,15 @@ while True:
     elif user_chose == '!rating':
         get_rating(user_name)
     elif user_chose not in options.keys():
-        print("Invalid input")
+        print("\nInvalid input. Try again and be careful 'Big brother is watching you' (^)-(^) ")
         continue
     elif user_chose == pc_chose:
-        print(f'There is a draw ({pc_chose})')
+        print(f'There is a draw ({pc_chose}). You get 50 points of rating')
         update_rating(user_name, 50)
     elif pc_chose not in options[user_chose]:
         print(f"Well done. The computer chose {pc_chose} and failed")
+        print('Congrat`s your rating increase!')
         update_rating(user_name, 100)
     else:
         print(f"Sorry, but the computer chose {pc_chose}")
+        update_rating(user_name, -50)

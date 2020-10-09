@@ -1,3 +1,6 @@
 Tim 350
 Jane 200
 Alex 400
+sdf 100
+ssg 50
+Di 100
