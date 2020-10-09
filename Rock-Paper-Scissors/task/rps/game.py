@@ -1,8 +1,14 @@
-# Write your code here
+# Let the game begin
+import os
 import random
 
-rating_path = 'Rock-Paper-Scissors/task/rps/rating.txt'
+# Define path for store rating in rating txt
+ABS_PATH = os.path.abspath(__file__)
+BASE_DIR = os.path.dirname(ABS_PATH)
+rating_path = os.path.join(BASE_DIR, 'rating.txt')
 
+
+# Two levels of games - Classic and Hard
 options = {'scissors': ['rock'], 'paper': ['scissors'], 'rock': ['paper']}
 extra_options = {'scissors': ['spock', 'rock', 'water', 'dragon', 'devil', 'lightning', 'gun'],
                  'fire': ['air', 'water', 'dragon', 'devil', 'lightning', 'gun'],
@@ -21,7 +27,7 @@ extra_options = {'scissors': ['spock', 'rock', 'water', 'dragon', 'devil', 'ligh
                  'snake': ['dragon', 'devil', 'lightning', 'gun', 'rock', 'scissors', 'lizard', 'fire']
                  }
 
-
+# read the file rating.txt and get user rating by  name file locate in the same direcory
 def get_rating(name):
     rate = open(rating_path, 'r')
     names_and_scores = [i.split() for i in rate.readlines()]
@@ -29,11 +35,11 @@ def get_rating(name):
     for i in names_and_scores:
         if name in i:
             user_score = i[1]
-    print(f'Your rating: {user_score}')
+    print(f'\nYour rating: {user_score}')
     rate.close()
     return user_score
 
-
+# read the file rating.txt and update rating file locate in the same direcory
 def update_rating(name, score):
     rate = open(rating_path, 'r')
     names_and_scores = []
@@ -67,7 +73,7 @@ if list_of_options != '':
 print("\nOkay, let's start")
 while True:
     print(f"\nOptions in {'Classic' if len(options) == 3 else 'HardRock'} game: " + ", ".join([i for i in options.keys()]))
-    user_chose = input("""Chose one from the options above or
+    user_chose = input("""\nChose one from the options above or
     press !rating for get rating or
     press !exit for exit the game\n> """)
     pc_chose = random.choice(list(options.keys()))
