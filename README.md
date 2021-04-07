@@ -26,3 +26,5 @@
 
 
 #### To play game follow the link  --> [![Run on Repl.it](https://repl.it/badge/github/ofisser86/jb-rock-paper-scissors)](https://replit.com/@ofisser86/jb-rock-paper-scissors-3) and click button !["Run"](button.png) on the top of the page
+
+[Source code](https://github.com/ofisser86/jb-rock-paper-scissors/blob/master/Rock-Paper-Scissors/task/rps/game.py)
